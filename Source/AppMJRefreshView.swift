@@ -12,7 +12,7 @@ import MJRefresh
 open class AppRefreshHeader: MJRefreshGifHeader {
     
     ///初始化
-    public override func prepare() {
+    open override func prepare() {
         super.prepare()
         
         var images = [UIImage]()
@@ -30,7 +30,7 @@ open class AppRefreshHeader: MJRefreshGifHeader {
         setTitle("刷新中", for: .refreshing)
     }
     
-    public override func placeSubviews() {
+    open override func placeSubviews() {
         super.placeSubviews()
         //这里设置图片和文字的位置
         /*1 图片上文字下
@@ -45,7 +45,7 @@ open class AppRefreshHeader: MJRefreshGifHeader {
 open class AppRefreshAutoGifFooter: MJRefreshAutoGifFooter {
     
     /// 初始化
-    public override func prepare() {
+    open override func prepare() {
         super.prepare()
         // 设置控件的高度
         mj_h = 50
@@ -68,7 +68,7 @@ open class AppRefreshAutoGifFooter: MJRefreshAutoGifFooter {
         setTitle("没有更多数据啦", for: .noMoreData)
     }
     
-    public override func placeSubviews() {
+    open override func placeSubviews() {
         super.placeSubviews()
         if let f = gifView?.frame,
             let c = gifView?.center {
