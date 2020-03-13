@@ -88,7 +88,7 @@ open class BaseTableVC: UIViewController, DZNEmptyDataSetSource, DZNEmptyDataSet
 
         return footer
     }()
-    public func getPageData(_ isMjRefresh: Bool = false) { }
+    open func getPageData(_ isMjRefresh: Bool = false) { }
 
     public func refreshFirstPageData() {
         mjPage = 1
