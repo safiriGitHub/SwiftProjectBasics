@@ -12,7 +12,7 @@ import UIKit
 open class LoadBundleUtil {
     
     
-    static open func loadImage(bundle: String, imageName: String, _ imageType: String = "png") -> UIImage? {
+    public static func loadImage(bundle: String, imageName: String, _ imageType: String = "png") -> UIImage? {
         
         if let path = Bundle(for: self).path(forResource: bundle, ofType: "bundle"),
             let bundle = Bundle.init(path: path),

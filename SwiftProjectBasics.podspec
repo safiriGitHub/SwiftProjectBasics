@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftProjectBasics"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "swift开发中总结的快速创建项目,用于swift开发中快速创建项目，个人使用，有缘人愿意用请随意"
 
   # This description is used to generate tags and improve search results.
