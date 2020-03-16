@@ -9,4 +9,6 @@ target 'ProjectBase-Demo' do
   pod 'MJRefresh'
   pod 'DZNEmptyDataSet'
   pod 'SnapKit'
+  pod 'Hue'
+  
 end
