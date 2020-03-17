@@ -116,6 +116,8 @@
 		032905D02412874000B3BEA5 /* ProjectBase-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				0350EBFA241F52D5003BC24D /* InputTextFieldView */,
+				0350EBFD241F6075003BC24D /* Extension */,
 				032905D12412874000B3BEA5 /* AppDelegate.swift */,
 				032905D52412874000B3BEA5 /* ViewController.swift */,
 				032905D72412874000B3BEA5 /* Main.storyboard */,
@@ -129,8 +131,6 @@
 		032905E5241287F200B3BEA5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0350EBFD241F6075003BC24D /* Extension */,
-				0350EBFA241F52D5003BC24D /* InputTextFieldView */,
 				032697872415F1D200ECEC9D /* Utils */,
 				032697842415F05200ECEC9D /* Resource */,
 				032905E62412885E00B3BEA5 /* BaseTableVC.swift */,

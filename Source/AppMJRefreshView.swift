@@ -28,6 +28,7 @@ open class AppRefreshHeader: MJRefreshGifHeader {
         setTitle("刷新数据", for: .idle)
         setTitle("开始加载", for: .pulling)
         setTitle("刷新中", for: .refreshing)
+        stateLabel?.font = UIFont.systemFont(ofSize: 15, weight: .light)
     }
     
     open override func placeSubviews() {
@@ -66,6 +67,7 @@ open class AppRefreshAutoGifFooter: MJRefreshAutoGifFooter {
         setTitle("正在努力加载", for: .pulling)
         setTitle("正在努力加载", for: .refreshing)
         setTitle("没有更多数据啦", for: .noMoreData)
+        stateLabel?.font = UIFont.systemFont(ofSize: 15, weight: .light)
     }
     
     open override func placeSubviews() {
