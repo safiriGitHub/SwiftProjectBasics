@@ -74,20 +74,20 @@ open class BaseTableVC: UIViewController, DZNEmptyDataSetSource, DZNEmptyDataSet
     public lazy var refreshFooter: AppRefreshAutoGifFooter = {
         let footer = AppRefreshAutoGifFooter(refreshingBlock: { [weak self] in
             self?.mjPage += 1
-            self?.tableView.mj_footer?.isHidden = true
             self?.getPageData(true)
         })
+        footer.isHidden = true
         footer.isAutomaticallyChangeAlpha = false
         return footer
     }()
     public lazy var refreshAutoNormalFooter: MJRefreshAutoNormalFooter = {
         let footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
             self?.mjPage += 1
-            self?.tableView.mj_footer?.isHidden = true
             self?.getPageData(true)
         })
         footer.isRefreshingTitleHidden = false
-
+        footer.isAutomaticallyChangeAlpha = false
+        footer.isHidden = true
         return footer
     }()
     open func getPageData(_ isMjRefresh: Bool = false) { }
