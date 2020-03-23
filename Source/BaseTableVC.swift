@@ -64,8 +64,8 @@ open class BaseTableVC: UIViewController, DZNEmptyDataSetSource, DZNEmptyDataSet
 
     public lazy var refreshHeader: AppRefreshHeader = {
         let header = AppRefreshHeader(refreshingBlock: { [weak self] in
-            self!.mjPage = 1
-            self!.getPageData(true)
+            self?.mjPage = 1
+            self?.getPageData(true)
         })
         header.isAutomaticallyChangeAlpha = true
         header.lastUpdatedTimeLabel?.isHidden = true
@@ -73,16 +73,18 @@ open class BaseTableVC: UIViewController, DZNEmptyDataSetSource, DZNEmptyDataSet
     }()
     public lazy var refreshFooter: AppRefreshAutoGifFooter = {
         let footer = AppRefreshAutoGifFooter(refreshingBlock: { [weak self] in
-            self!.mjPage += 1
-            self!.getPageData(true)
+            self?.mjPage += 1
+            self?.tableView.mj_footer?.isHidden = true
+            self?.getPageData(true)
         })
         footer.isAutomaticallyChangeAlpha = false
         return footer
     }()
     public lazy var refreshAutoNormalFooter: MJRefreshAutoNormalFooter = {
         let footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
-            self!.mjPage += 1
-            self!.getPageData(true)
+            self?.mjPage += 1
+            self?.tableView.mj_footer?.isHidden = true
+            self?.getPageData(true)
         })
         footer.isRefreshingTitleHidden = false
 
@@ -113,8 +115,8 @@ open class BaseTableVC: UIViewController, DZNEmptyDataSetSource, DZNEmptyDataSet
         public init() { }
         
         public static func DZNEmptyTitle(_ title: String,
-                                  color: UIColor = UIColor.lightGray/*目前用这个颜色，后期做常用颜色库*/,
-            font: UIFont = UIFont.systemFont(ofSize: 16)) -> NSAttributedString {
+                                  color: UIColor = UIColor.darkGray/*目前用这个颜色，后期做常用颜色库*/,
+            font: UIFont = UIFont.systemFont(ofSize: 16, weight: .light)) -> NSAttributedString {
             return NSAttributedString(string: title, attributes: [.foregroundColor : color, .font : font])
         }
         public static func DZNEmptyDescription(_ description: String,
